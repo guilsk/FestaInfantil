@@ -8,5 +8,8 @@ namespace FestaInfantil.ModuloCliente
 {
     internal class Cliente
     {
+        public string nome;
+        public string telefone;
+
     }
 }
