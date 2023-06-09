@@ -1,17 +1,17 @@
-using FestaInfantil.Compartilhado;
-using FestaInfantil.ModuloTema;
-
 namespace FestaInfantil
 {
-    public partial class Form1 : Form
+    public partial class TelaPrincipal : Form
     {
 
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
 
         private IRepositorioTema repositorioTema = new RepositorioArquivoTema(contextoDados);
-        public Form1()
+        
+        public TelaPrincipal()
         {
             InitializeComponent();
         }
+
+
     }
 }
