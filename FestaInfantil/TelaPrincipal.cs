@@ -1,3 +1,6 @@
+using FestaInfantil.Compartilhado;
+using FestaInfantil.ModuloTema;
+
 namespace FestaInfantil
 {
     public partial class TelaPrincipal : Form
