@@ -8,11 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="ModuloCliente\" />
-    <Folder Include="ModuloTema\" />
-    <Folder Include="ModuloFesta\" />
-    <Folder Include="ModuloAluguel\" />
-  </ItemGroup>
-
 </Project>
