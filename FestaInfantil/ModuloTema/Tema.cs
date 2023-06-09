@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FestaInfantil.ModuloTema
 {
-    internal class Tema
+    public class Tema
     {
     }
 }

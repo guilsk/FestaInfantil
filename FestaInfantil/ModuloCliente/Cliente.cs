@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FestaInfantil.ModuloCliente
 {
-    internal class Cliente
+    public class Cliente
     {
         public string nome;
         public string telefone;
