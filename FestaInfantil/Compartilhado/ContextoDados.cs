@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using System.Text.Json.Serialization;
 using System.Text.Json;
-using System.Threading.Tasks;
+using FestaInfantil.ModuloTema;
 
 namespace FestaInfantil.Compartilhado
 {
@@ -12,7 +9,7 @@ namespace FestaInfantil.Compartilhado
     {
         private const string NOME_ARQUIVO = "Compartilhado\\FestaInfantil.json";
 
-        //public List<Contato> contatos;
+        public List<Tema> temas;
 
         //public List<Compromisso> compromissos;
 
@@ -24,7 +21,7 @@ namespace FestaInfantil.Compartilhado
 
         public ContextoDados()
         {
-            //contatos = new List<Contato>();
+            temas = new List<Tema>();
             //compromissos = new List<Compromisso>();
             //tarefas = new List<Tarefa>();
             //categorias = new List<Categoria>();
