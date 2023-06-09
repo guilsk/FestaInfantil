@@ -43,7 +43,7 @@
 
         public abstract UserControl ObterListagem();
 
-        public abstract string ObterTipoCadastro();
+        
 
     }
 }
