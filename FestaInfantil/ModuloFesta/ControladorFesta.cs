@@ -18,6 +18,8 @@ namespace FestaInfantil.ModuloFesta
 
         public override string ToolTipExcluir => "Excluir Festa Existente";
 
+        public override string LabelTipoCadastro => "Cadastro de Festas";
+
         public override void Inserir()
         {
             TelaFestaForm telaFesta = new TelaFestaForm();
