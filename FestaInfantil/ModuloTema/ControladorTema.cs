@@ -2,16 +2,24 @@
 using FestaInfantil.Dominio.ModuloTema;
 
 namespace FestaInfantil.ModuloTema {
-    internal class ControladorTema : ControladorBase {
+    public class ControladorTema : ControladorBase {
+
 
         private IRepositorioTema repositorioTema;
         private TabelaTemaControl tabelaTemas;
+
+
+        public ControladorTema(IRepositorioTema repositorioTema) {
+            this.repositorioTema = repositorioTema;
+        }
 
         public override string ToolTipInserir => "Inserir novo Tema";
 
         public override string ToolTipEditar => "Editar Tema Existente";
 
         public override string ToolTipExcluir => "Excluir Tema Existente";
+
+        public override string LabelTipoCadastro => "Cadastro de Temas";
 
         public override void Inserir() {
             TelaTemaForm telaTema = new TelaTemaForm();
@@ -26,13 +34,25 @@ namespace FestaInfantil.ModuloTema {
         }
 
         public override void Editar() {
+
+            Tema temaSelecionado = ObterTemaSelecionado();
+
+            if (temaSelecionado == null) {
+                MessageBox.Show("Nenhum Tema Selecionado!", "Editar Temas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             TelaTemaForm telaTema = new TelaTemaForm();
+            telaTema.ConfigurarTela(temaSelecionado);
+
             DialogResult opcaoEscolhida = telaTema.ShowDialog();
 
             if (opcaoEscolhida == DialogResult.OK) {
 
                 Tema tema = telaTema.ObterTema();
-                repositorioTema.Editar(tema.id,tema);
+
+                repositorioTema.Editar(tema.id, tema);
+
                 CarregarTemas();
             }
         }

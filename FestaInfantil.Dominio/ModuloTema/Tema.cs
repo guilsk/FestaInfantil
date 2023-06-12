@@ -11,6 +11,10 @@
             itens = new List<ItemTema>();
         }
 
+        public Tema() {
+           
+        }
+
         public override void AtualizarInformacoes(Tema registroAtualizado) {
             id = registroAtualizado.id;
             nome = registroAtualizado.nome;

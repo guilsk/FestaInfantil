@@ -59,6 +59,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
                 {
                     ContextoDados ctx = JsonSerializer.Deserialize<ContextoDados>(registrosJson, config);
 
+                    this.temas = ctx.temas;
                     this.festas = ctx.festas;
 
                     //this.contatos = ctx.contatos;
