@@ -14,6 +14,8 @@
 
         public virtual string ToolTipConcluirItens { get; }
 
+        public abstract string LabelTipoCadastro { get; }
+
 
         public virtual bool InserirHabilitado { get { return true; } }
         public virtual bool EditarHabilitado { get { return true; } }
