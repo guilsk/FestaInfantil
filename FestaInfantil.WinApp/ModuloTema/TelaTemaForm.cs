@@ -1,5 +1,6 @@
 ﻿using FestaInfantil.Compartilhado;
-using FestaInfantil.Dominio.ModuloTema;
+using System;
+using System.Collections.Generic;
 
 namespace FestaInfantil.ModuloTema {
     public partial class TelaTemaForm : Form {

@@ -1,5 +1,6 @@
 ﻿
 using FestaInfantil.Compartilhado;
+using FestaInfantil.Dominio.ModuloTema;
 
 namespace FestaInfantil.ModuloTema {
     internal class RepositorioArquivoTema : RepositorioEmArquivoBase<Tema>, IRepositorioTema {

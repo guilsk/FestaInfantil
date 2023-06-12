@@ -1,4 +1,4 @@
-﻿namespace FestaInfantil.Compartilhado
+﻿namespace FestaInfantil.WinApp.Compartilhado
 {
     public abstract class RepositorioEmArquivoBase<T> where T : EntidadeBase<T>
     {

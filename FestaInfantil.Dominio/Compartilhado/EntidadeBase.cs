@@ -1,4 +1,4 @@
-﻿namespace FestaInfantil.Compartilhado
+﻿namespace FestaInfantil.Dominio.Compartilhado
 {
     [Serializable]
     public abstract class EntidadeBase<TEntidade>

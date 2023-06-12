@@ -1,7 +1,4 @@
-﻿using FestaInfantil.Compartilhado;
-using FestaInfantil.ModuloTema;
-
-namespace FestaInfantil.ModuloFesta
+﻿namespace FestaInfantil.Dominio.ModuloFesta
 {
     [Serializable]
     public class Festa : EntidadeBase<Festa>

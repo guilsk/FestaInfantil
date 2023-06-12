@@ -1,5 +1,6 @@
-﻿using FestaInfantil.Compartilhado;
-using FestaInfantil.Dominio.ModuloTema;
+﻿
+
+using FestaInfantil.Compartilhado;
 
 namespace FestaInfantil.ModuloTema {
     public partial class TabelaTemaControl : UserControl {

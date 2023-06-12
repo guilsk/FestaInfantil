@@ -1,5 +1,4 @@
-﻿using FestaInfantil.Compartilhado;
-using FestaInfantil.Dominio.ModuloTema;
+﻿using FestaInfantil.WinApp.Compartilhado;
 
 namespace FestaInfantil.ModuloTema {
     internal class ControladorTema : ControladorBase {

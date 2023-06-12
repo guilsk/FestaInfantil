@@ -1,6 +1,4 @@
-﻿using FestaInfantil.Dominio.ModuloFesta;
-
-namespace FestaInfantil.ModuloFesta
+﻿namespace FestaInfantil.ModuloFesta
 {
     public partial class TelaFestaForm : Form
     {

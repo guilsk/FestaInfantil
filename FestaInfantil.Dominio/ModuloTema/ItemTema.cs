@@ -1,7 +1,4 @@
-﻿
-using FestaInfantil.Compartilhado;
-
-namespace FestaInfantil.ModuloTema {
+﻿namespace FestaInfantil.Dominio.ModuloTema {
     public class ItemTema:EntidadeBase<ItemTema>  {
 
         public string nome;
