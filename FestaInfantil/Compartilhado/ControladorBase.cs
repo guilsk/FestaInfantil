@@ -20,8 +20,9 @@
         public virtual bool ExcluirHabilitado { get { return true; } }
 
         public virtual bool FiltrarHabilitado { get { return false; } }
-        public virtual bool AdicionarItensHabilitado { get { return false; } }
-        public virtual bool ConcluirItensHabilitado { get { return false; } }
+        public virtual bool AdicionarItensTemaHabilitado { get { return false; } }
+        public virtual bool ExcluirItensTemaHabilitado { get { return false; } }
+        public virtual bool FecharAluguelHabilitado{ get { return false; } }
 
         public abstract void Inserir();
 
@@ -33,11 +34,15 @@
         {
         }
 
-        public virtual void Adicionar()
+        public virtual void AdicionarItensTema()
         {
         }
 
-        public virtual void ConcluirItens()
+        public virtual void ExcluirItensTema()
+        {
+        }
+
+        public virtual void FecharAluguel()
         {
         }
 

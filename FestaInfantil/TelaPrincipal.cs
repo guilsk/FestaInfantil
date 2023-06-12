@@ -10,7 +10,7 @@ namespace FestaInfantil
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
 
         private IRepositorioTema repositorioTema = new RepositorioArquivoTema(contextoDados);
-        
+
         public TelaPrincipal()
         {
             InitializeComponent();

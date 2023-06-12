@@ -44,11 +44,11 @@
             toolStripSeparator1 = new ToolStripSeparator();
             btnExcluir = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
-            btnAdicionarTema = new ToolStripButton();
+            btnAdicionarItensTema = new ToolStripButton();
             toolStripSeparator4 = new ToolStripSeparator();
             btnExcluirItensTema = new ToolStripButton();
             toolStripSeparator5 = new ToolStripSeparator();
-            btnFacharAluguel = new ToolStripButton();
+            btnFecharAluguel = new ToolStripButton();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -113,7 +113,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, toolStripSeparator3, btnEditar, toolStripSeparator1, btnExcluir, toolStripSeparator2, btnAdicionarTema, toolStripSeparator4, btnExcluirItensTema, toolStripSeparator5, btnFacharAluguel });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, toolStripSeparator3, btnEditar, toolStripSeparator1, btnExcluir, toolStripSeparator2, btnAdicionarItensTema, toolStripSeparator4, btnExcluirItensTema, toolStripSeparator5, btnFecharAluguel });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(682, 25);
@@ -163,14 +163,14 @@
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 25);
             // 
-            // btnAdicionarTema
+            // btnAdicionarItensTema
             // 
-            btnAdicionarTema.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnAdicionarTema.Image = (Image)resources.GetObject("btnAdicionarTema.Image");
-            btnAdicionarTema.ImageTransparentColor = Color.Magenta;
-            btnAdicionarTema.Name = "btnAdicionarTema";
-            btnAdicionarTema.Size = new Size(23, 22);
-            btnAdicionarTema.Text = "toolStripButton5";
+            btnAdicionarItensTema.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAdicionarItensTema.Image = (Image)resources.GetObject("btnAdicionarItensTema.Image");
+            btnAdicionarItensTema.ImageTransparentColor = Color.Magenta;
+            btnAdicionarItensTema.Name = "btnAdicionarItensTema";
+            btnAdicionarItensTema.Size = new Size(23, 22);
+            btnAdicionarItensTema.Text = "toolStripButton5";
             // 
             // toolStripSeparator4
             // 
@@ -191,14 +191,14 @@
             toolStripSeparator5.Name = "toolStripSeparator5";
             toolStripSeparator5.Size = new Size(6, 25);
             // 
-            // btnFacharAluguel
+            // btnFecharAluguel
             // 
-            btnFacharAluguel.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnFacharAluguel.Image = (Image)resources.GetObject("btnFacharAluguel.Image");
-            btnFacharAluguel.ImageTransparentColor = Color.Magenta;
-            btnFacharAluguel.Name = "btnFacharAluguel";
-            btnFacharAluguel.Size = new Size(23, 22);
-            btnFacharAluguel.Text = "toolStripButton6";
+            btnFecharAluguel.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnFecharAluguel.Image = (Image)resources.GetObject("btnFecharAluguel.Image");
+            btnFecharAluguel.ImageTransparentColor = Color.Magenta;
+            btnFecharAluguel.Name = "btnFecharAluguel";
+            btnFecharAluguel.Size = new Size(23, 22);
+            btnFecharAluguel.Text = "toolStripButton6";
             // 
             // TelaPrincipal
             // 
@@ -240,10 +240,10 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton btnExcluir;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton btnAdicionarTema;
+        private ToolStripButton btnAdicionarItensTema;
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton btnExcluirItensTema;
         private ToolStripSeparator toolStripSeparator5;
-        private ToolStripButton btnFacharAluguel;
+        private ToolStripButton btnFecharAluguel;
     }
 }

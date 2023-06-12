@@ -5,6 +5,5 @@
         void Excluir(Tema temaSelecionado);
         Tema SelecionarPorId(int id);
         List<Tema> SelecionarTodos();
-        
     }
 }

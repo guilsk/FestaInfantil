@@ -15,7 +15,7 @@ namespace FestaInfantil.ModuloFesta
             string cliente = cmbBoxCliente.Text;
             string tema = cmbBoxTema.Text;
             string endereco = txtEndereco.Text;
-            
+
             DateTime data = txtData.Value;
             TimeSpan horaInicio = txtHoraInicio.Value.TimeOfDay;
             TimeSpan horaFim = txtHoraFim.Value.TimeOfDay;
@@ -25,7 +25,7 @@ namespace FestaInfantil.ModuloFesta
 
             Festa festa = new Festa(id, cliente, tema, data, horaInicio, horaFim, endereco, valorTotal, valorEntrada);
 
-            if(id > 0) festa.id = id;
+            if (id > 0) festa.id = id;
 
             return festa;
         }

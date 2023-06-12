@@ -93,7 +93,7 @@
         YII=
 </value>
   </data>
-  <data name="btnAdicionarTema.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAdicionarItensTema.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVEhL1ZLrDcIwDAY7CqMwCpsxCqMwCuR+HEorNw8D
@@ -112,7 +112,7 @@
         SnkBj9pjHkThhSMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnFacharAluguel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnFecharAluguel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEISURBVEhLzZKLDYMwEEMZpaN0lI7STTpKR+kobZ6EI3O6

@@ -2,6 +2,7 @@
 using System.Text.Json;
 
 using FestaInfantil.Dominio.ModuloTema;
+using FestaInfantil.Dominio.ModuloFesta;
 
 namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
 {
@@ -10,6 +11,8 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
         private const string NOME_ARQUIVO = "Compartilhado\\FestaInfantil.json";
 
         public List<Tema> temas;
+
+        public List<Festa> festas;
 
         //public List<Compromisso> compromissos;
 
@@ -22,6 +25,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
         public ContextoDados()
         {
             temas = new List<Tema>();
+            festas = new List<Festa>();
             //compromissos = new List<Compromisso>();
             //tarefas = new List<Tarefa>();
             //categorias = new List<Categoria>();
@@ -54,6 +58,8 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
                 if (registrosJson.Length > 0)
                 {
                     ContextoDados ctx = JsonSerializer.Deserialize<ContextoDados>(registrosJson, config);
+
+                    this.festas = ctx.festas;
 
                     //this.contatos = ctx.contatos;
                     //this.compromissos = ctx.compromissos;
