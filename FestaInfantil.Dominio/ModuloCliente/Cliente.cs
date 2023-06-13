@@ -33,7 +33,7 @@
         }
         public override string ToString()
         {
-            return "Id: " + id + ", " + nome + ", Telefone: " + telefone;
+            return nome;
         }
 
         public override string[] Validar()
@@ -57,5 +57,7 @@
                    telefone == cliente.telefone;
 
         }
+
+
     }
 }

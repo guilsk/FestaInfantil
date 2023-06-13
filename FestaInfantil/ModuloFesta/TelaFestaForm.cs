@@ -6,19 +6,24 @@ namespace FestaInfantil.ModuloFesta
 {
     public partial class TelaFestaForm : Form
     {
-        public TelaFestaForm(IRepositorioTema temas)
+        public TelaFestaForm(IRepositorioTema temas, IRepositorioCliente clientes)
         {
             InitializeComponent();
 
-            CarregarInformacoes(temas);//Atualizar os clientes também
+            CarregarInformacoes(temas, clientes);
 
         }
 
-        private void CarregarInformacoes(IRepositorioTema temas)
+        private void CarregarInformacoes(IRepositorioTema temas, IRepositorioCliente clientes)
         {
             foreach (Tema t in temas.SelecionarTodos())
             {
                 cmbBoxTema.Items.Add(t);
+            }
+
+            foreach (Cliente c in clientes.SelecionarTodos())
+            {
+                cmbBoxCliente.Items.Add(c);
             }
         }
 
@@ -50,7 +55,7 @@ namespace FestaInfantil.ModuloFesta
 
             txtValorTotal.Text = valorTotal.ToString();
 
-            decimal valorEntrada = valorTotal * (40 / 100);
+            decimal valorEntrada = valorTotal * (decimal)0.4;
 
             txtValorEntrada.Text = valorEntrada.ToString();
         }
@@ -76,8 +81,7 @@ namespace FestaInfantil.ModuloFesta
         public Festa ObterFesta()
         {
             int id = Convert.ToInt32(txtId.Text);
-            Cliente cliente = null;
-            //foreach(Cliente c in repositorioCliente)
+            Cliente cliente = (Cliente)cmbBoxCliente.SelectedItem;
 
             Tema tema = (Tema)cmbBoxTema.SelectedItem;
 
@@ -87,12 +91,12 @@ namespace FestaInfantil.ModuloFesta
             TimeSpan horaInicio = txtHoraInicio.Value.TimeOfDay;
             TimeSpan horaFim = txtHoraFim.Value.TimeOfDay;
 
-            string valorTotal = txtValorTotal.Text;
-            string valorEntrada = txtValorEntrada.Text;
+            decimal valorTotal = Convert.ToDecimal(txtValorTotal.Text);
+            decimal valorEntrada = Convert.ToDecimal(txtValorEntrada.Text);
 
             List<ItemTema> itensSelecionados = ObterItensMarcados();
 
-            Festa festa = new Festa(id, cliente, tema, data, horaInicio, horaFim, endereco, valorTotal, valorEntrada, itensSelecionados);
+            Festa festa = new Festa(id, cliente, tema, data, horaInicio, horaFim, endereco, valorTotal, valorEntrada, itensSelecionados, false);
 
             if (id > 0) festa.id = id;
 

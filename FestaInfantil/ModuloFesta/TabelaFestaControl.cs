@@ -44,6 +44,14 @@ namespace FestaInfantil.ModuloFesta
                     Name = "preco",
                     HeaderText= "Preço"
                 },
+                new DataGridViewTextBoxColumn(){
+                    Name = "valorAPagar",
+                    HeaderText= "Valor a Pagar"
+                },
+                new DataGridViewTextBoxColumn(){
+                    Name = "aberto",
+                    HeaderText= "Em Aberto"
+                },
             };
 
             grid.Columns.AddRange(colunas);
@@ -54,7 +62,13 @@ namespace FestaInfantil.ModuloFesta
             grid.Rows.Clear();
 
             foreach (Festa f in festas)
-                grid.Rows.Add(f.id, f.cliente, f.tema, f.data.ToShortDateString(), f.horaInicio.Hours + ":" + f.horaInicio.Minutes, f.endereco, f.valorTotal); ;
+            {
+                if (f.encerrado) 
+                    grid.Rows.Add(f.id, f.cliente, f.tema, f.data.ToShortDateString(), f.horaInicio.Hours + ":" + f.horaInicio.Minutes, f.endereco, f.valorTotal, f.valorRestante, "Encerrado");
+                else
+                    grid.Rows.Add(f.id, f.cliente, f.tema, f.data.ToShortDateString(), f.horaInicio.Hours + ":" + f.horaInicio.Minutes, f.endereco, f.valorTotal, f.valorRestante, "Em Aberto");
+
+            }
         }
 
         public int ObterIdSelecionado()

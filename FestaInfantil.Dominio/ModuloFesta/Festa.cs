@@ -12,13 +12,15 @@ namespace FestaInfantil.Dominio.ModuloFesta
         public TimeSpan horaInicio;
         public TimeSpan horaFim;
         public string endereco;
-        public string valorTotal;
-        public string valorEntrada;
+        public decimal valorTotal;
+        public decimal valorEntrada;
+        public decimal valorRestante;
         public List<ItemTema> itensSelecionados;
+        public bool encerrado = false;
 
         public Festa() { }
 
-        public Festa(Cliente cliente, Tema tema, DateTime data, TimeSpan horaInicio, TimeSpan horaFim, string endereco, string valorTotal, string valorEntrada, List<ItemTema> itensSelecionados)
+        public Festa(Cliente cliente, Tema tema, DateTime data, TimeSpan horaInicio, TimeSpan horaFim, string endereco, decimal valorTotal, decimal valorEntrada, List<ItemTema> itensSelecionados, bool encerrado)
         {
             this.cliente = cliente;
             this.tema = tema;
@@ -29,9 +31,11 @@ namespace FestaInfantil.Dominio.ModuloFesta
             this.valorTotal = valorTotal;
             this.valorEntrada = valorEntrada;
             this.itensSelecionados = itensSelecionados;
+            valorRestante = this.valorTotal - this.valorEntrada;
+            this.encerrado = encerrado;
         }
 
-        public Festa(int id, Cliente cliente, Tema tema, DateTime data, TimeSpan horaInicio, TimeSpan horaFim, string endereco, string valorTotal, string valorEntrada, List<ItemTema> itensSelecionados)
+        public Festa(int id, Cliente cliente, Tema tema, DateTime data, TimeSpan horaInicio, TimeSpan horaFim, string endereco, decimal valorTotal, decimal valorEntrada, List<ItemTema> itensSelecionados, bool encerrado)
         {
             this.id = id;
             this.cliente = cliente;
@@ -43,6 +47,8 @@ namespace FestaInfantil.Dominio.ModuloFesta
             this.valorTotal = valorTotal;
             this.valorEntrada = valorEntrada;
             this.itensSelecionados = itensSelecionados;
+            valorRestante = this.valorTotal - this.valorEntrada;
+            this.encerrado = encerrado;
         }
 
         public override void AtualizarInformacoes(Festa registroAtualizado)
@@ -56,6 +62,8 @@ namespace FestaInfantil.Dominio.ModuloFesta
             valorTotal = registroAtualizado.valorTotal;
             valorEntrada = registroAtualizado.valorEntrada;
             itensSelecionados = registroAtualizado.itensSelecionados;
+            valorRestante = registroAtualizado.valorRestante;
+            encerrado = registroAtualizado.encerrado;
         }
 
         public override string[] Validar()

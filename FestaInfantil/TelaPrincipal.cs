@@ -49,6 +49,12 @@ namespace FestaInfantil
         {
             controlador.ExcluirItensTema();
         }
+
+        private void btnFecharAluguel_Click(object sender, EventArgs e)
+        {
+            controlador.FecharAluguel();
+        }
+
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorCliente(repositorioCliente);
@@ -63,7 +69,7 @@ namespace FestaInfantil
 
         private void festaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorFesta(repositorioFesta, repositorioTema);
+            controlador = new ControladorFesta(repositorioFesta, repositorioTema, repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
         }
 
@@ -107,7 +113,7 @@ namespace FestaInfantil
             lbRodape.Text = mensagem;
         }
 
-
+        
 
         public static TelaPrincipal Instancia
         {

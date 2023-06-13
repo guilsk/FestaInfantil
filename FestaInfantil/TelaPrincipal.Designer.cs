@@ -201,6 +201,7 @@
             btnFecharAluguel.ImageTransparentColor = Color.Magenta;
             btnFecharAluguel.Name = "btnFecharAluguel";
             btnFecharAluguel.Size = new Size(28, 28);
+            btnFecharAluguel.Click += btnFecharAluguel_Click;
             // 
             // labelTipoCadastro
             // 

@@ -2,6 +2,7 @@
 using FestaInfantil.Dominio.ModuloFesta;
 using FestaInfantil.Dominio.ModuloTema;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace FestaInfantil.ModuloFesta
 {
@@ -9,12 +10,14 @@ namespace FestaInfantil.ModuloFesta
     {
         private IRepositorioFesta repositorioFesta;
         private IRepositorioTema repositorioTema;
+        private IRepositorioCliente repositorioCliente;
         private TabelaFestaControl tabelaFestas;
 
-        public ControladorFesta(IRepositorioFesta repositorioFesta, IRepositorioTema repositorioTema /*IRepositorioCliente*/)
+        public ControladorFesta(IRepositorioFesta repositorioFesta, IRepositorioTema repositorioTema, IRepositorioCliente repositorioCliente)
         {
             this.repositorioFesta = repositorioFesta;
             this.repositorioTema = repositorioTema;
+            this.repositorioCliente= repositorioCliente;
         }
 
         public override string ToolTipInserir => "Inserir Nova Festa";
@@ -25,9 +28,11 @@ namespace FestaInfantil.ModuloFesta
 
         public override string LabelTipoCadastro => "Cadastro de Festas";
 
+        public override bool FecharAluguelHabilitado { get { return true; } }
+
         public override void Inserir()
         {
-            TelaFestaForm telaFesta = new TelaFestaForm(/*clientes, */repositorioTema);
+            TelaFestaForm telaFesta = new TelaFestaForm(repositorioTema, repositorioCliente);
             DialogResult opcaoEscolhida = telaFesta.ShowDialog();
 
             if (opcaoEscolhida == DialogResult.OK)
@@ -40,7 +45,7 @@ namespace FestaInfantil.ModuloFesta
 
         public override void Editar()
         {
-            TelaFestaForm telaFesta = new TelaFestaForm(/*clientes, */repositorioTema);
+            TelaFestaForm telaFesta = new TelaFestaForm(repositorioTema, repositorioCliente);
             DialogResult opcaoEscolhida = telaFesta.ShowDialog();
 
             if (opcaoEscolhida == DialogResult.OK)
@@ -86,6 +91,23 @@ namespace FestaInfantil.ModuloFesta
         {
             List<Festa> festas = repositorioFesta.SelecionarTodos();
             tabelaFestas.AtualizarRegistros(festas);
+        }
+
+        public override void FecharAluguel()
+        {
+            Festa festa = ObterFestaSelecionado();
+            
+
+            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja Encerrar o Aluguel {festa.tema} ?", "Encerramento de Aluguel", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                festa.encerrado = true;
+                festa.valorRestante = 0;
+                festa.cliente.antigo = true;
+                CarregarFestas();
+            }
+
         }
     }
 }
