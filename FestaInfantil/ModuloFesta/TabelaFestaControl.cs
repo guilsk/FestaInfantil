@@ -22,7 +22,27 @@ namespace FestaInfantil.ModuloFesta
                 },
                 new DataGridViewTextBoxColumn(){
                     Name = "nome",
+                    HeaderText= "Cliente"
+                },
+                new DataGridViewTextBoxColumn(){
+                    Name = "tema",
                     HeaderText= "Tema"
+                },
+                new DataGridViewTextBoxColumn(){
+                    Name = "data",
+                    HeaderText= "Data"
+                },
+                new DataGridViewTextBoxColumn(){
+                    Name = "hora",
+                    HeaderText= "Horario"
+                },
+                new DataGridViewTextBoxColumn(){
+                    Name = "endereco",
+                    HeaderText= "Endereço"
+                },
+                new DataGridViewTextBoxColumn(){
+                    Name = "preco",
+                    HeaderText= "Preço"
                 },
             };
 
@@ -34,7 +54,7 @@ namespace FestaInfantil.ModuloFesta
             grid.Rows.Clear();
 
             foreach (Festa f in festas)
-                grid.Rows.Add(f.id, f.tema);
+                grid.Rows.Add(f.id, f.cliente, f.tema, f.data, f.horaInicio, f.endereco, f.valorTotal); ;
         }
 
         public int ObterIdSelecionado()

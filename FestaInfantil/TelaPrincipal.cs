@@ -23,30 +23,35 @@ namespace FestaInfantil
         {
             InitializeComponent();
         }
-        private void btnInserir_Click_1(object sender, EventArgs e) {
+        private void btnInserir_Click_1(object sender, EventArgs e)
+        {
             controlador.Inserir();
         }
-        private void btnEditar_Click_1(object sender, EventArgs e) {
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
             controlador.Editar();
         }
 
-        private void btnExcluir_Click_1(object sender, EventArgs e) {
+        private void btnExcluir_Click_1(object sender, EventArgs e)
+        {
             controlador.Excluir();
         }
-        
-        private void btnAdicionarItensTema_Click(object sender, EventArgs e) 
+
+        private void btnAdicionarItensTema_Click(object sender, EventArgs e)
         {
             controlador.AdicionarItensTema();
         }
-        private void btnExcluirItensTema_Click(object sender, EventArgs e) {
+        private void btnExcluirItensTema_Click(object sender, EventArgs e)
+        {
             controlador.ExcluirItensTema();
         }
 
-        private void temasToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
         }
-        
+
         private void festaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorFesta(repositorioFesta);

@@ -48,6 +48,7 @@
             btnCancelar = new Button();
             label9 = new Label();
             txtId = new TextBox();
+            listaItens = new CheckedListBox();
             SuspendLayout();
             // 
             // label1
@@ -189,7 +190,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(256, 199);
+            btnSalvar.Location = new Point(259, 449);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 75);
             btnSalvar.TabIndex = 17;
@@ -199,7 +200,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(337, 199);
+            btnCancelar.Location = new Point(340, 449);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 75);
             btnCancelar.TabIndex = 18;
@@ -222,13 +223,22 @@
             txtId.Size = new Size(117, 23);
             txtId.TabIndex = 20;
             // 
+            // listaItens
+            // 
+            listaItens.FormattingEnabled = true;
+            listaItens.Location = new Point(12, 292);
+            listaItens.Name = "listaItens";
+            listaItens.Size = new Size(400, 148);
+            listaItens.TabIndex = 21;
+            // 
             // TelaFestaForm
             // 
             AcceptButton = btnSalvar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancelar;
-            ClientSize = new Size(449, 298);
+            ClientSize = new Size(430, 536);
+            Controls.Add(listaItens);
             Controls.Add(txtId);
             Controls.Add(label9);
             Controls.Add(btnCancelar);
@@ -280,5 +290,6 @@
         private Button btnCancelar;
         private Label label9;
         private TextBox txtId;
+        private CheckedListBox listaItens;
     }
 }
