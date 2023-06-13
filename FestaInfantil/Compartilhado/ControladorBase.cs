@@ -10,9 +10,10 @@
 
         public virtual string ToolTipFiltrar { get; }
 
-        public virtual string ToolTipAdicionarItens { get; }
+        public virtual string ToolTipAdicionarItensTema { get; }
 
-        public virtual string ToolTipConcluirItens { get; }
+        public virtual string ToolTipExcluirItensTema { get; }
+        public virtual string ToolTipFecharAluguel { get; }
 
         public abstract string LabelTipoCadastro { get; }
 

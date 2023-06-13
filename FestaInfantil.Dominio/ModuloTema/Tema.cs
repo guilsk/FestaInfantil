@@ -1,5 +1,6 @@
 ﻿namespace FestaInfantil.Dominio.ModuloTema
 {
+    [Serializable]
     public class Tema : EntidadeBase<Tema> {
 
         public string nome;
@@ -14,6 +15,19 @@
         public Tema() {
            
         }
+
+        public void LimparListaItens() {
+            itens.Clear();
+        }
+
+        public void AdicionarItem(ItemTema item) {
+            itens.Add(item);
+        }
+
+        public void RemoverItem(ItemTema item) {
+            itens.Remove(item);
+        }
+
 
         public override void AtualizarInformacoes(Tema registroAtualizado) {
             id = registroAtualizado.id;

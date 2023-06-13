@@ -21,6 +21,13 @@ namespace FestaInfantil.ModuloTema {
 
         public override string LabelTipoCadastro => "Cadastro de Temas";
 
+        public override string ToolTipAdicionarItensTema => "Adicionar Itens no Tema Selecionado";
+
+        public override string ToolTipExcluirItensTema => "Excluir Itens no Tema Selecionado";
+
+        public override bool AdicionarItensTemaHabilitado => true;
+        public override bool ExcluirItensTemaHabilitado => true;
+
         public override void Inserir() {
             TelaTemaForm telaTema = new TelaTemaForm();
             DialogResult opcaoEscolhida = telaTema.ShowDialog();
@@ -69,6 +76,72 @@ namespace FestaInfantil.ModuloTema {
                 CarregarTemas();
             }
         }
+
+        public override void AdicionarItensTema() {
+
+            Tema temaSelecionado = ObterTemaSelecionado();
+
+            if (temaSelecionado == null) {
+                MessageBox.Show("Nenhuma Tema Selecionado!", "Adição de itens do Tema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            TelaCadastroItensTemaForm telaCadastroItensTemaForm = new TelaCadastroItensTemaForm(temaSelecionado);
+
+            DialogResult opcao = telaCadastroItensTemaForm.ShowDialog();
+
+            if (opcao == DialogResult.OK) {
+                List<ItemTema> itensParaAdicionar = telaCadastroItensTemaForm.ObterItensCadastrados();
+                temaSelecionado.LimparListaItens();
+
+                foreach (ItemTema item in itensParaAdicionar) {
+
+                    temaSelecionado.AdicionarItem(item);
+
+                }
+
+                repositorioTema.Editar(temaSelecionado.id, temaSelecionado);
+
+                CarregarTemas();
+            }
+        }
+
+        public override void ExcluirItensTema() {
+            Tema temaSelecionado = ObterTemaSelecionado();
+
+            if (temaSelecionado == null) {
+                MessageBox.Show("Nenhuma Tema Selecionado!", "Exclusão de itens do Tema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            TelaExclusaoItensTemaForm telaExclusao = new TelaExclusaoItensTemaForm(temaSelecionado);
+
+            if(temaSelecionado.itens.Count == 0) 
+            {
+                MessageBox.Show("O Tema selecionado não possui nenhum item cadastrado!", "Exclusão de itens do Tema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            } 
+                else 
+                {
+                DialogResult opcao = telaExclusao.ShowDialog();
+
+                if (opcao == DialogResult.OK) {
+
+                    List<ItemTema> itensMarcados = telaExclusao.ObterItensMarcados();
+
+                    foreach (ItemTema item in itensMarcados) {
+
+                        temaSelecionado.RemoverItem(item);
+
+                    }
+
+                    repositorioTema.Editar(temaSelecionado.id, temaSelecionado);
+
+                    CarregarTemas();
+                }
+            }
+        }
+
 
         private Tema ObterTemaSelecionado() {
             int id = tabelaTemas.ObterIdSelecionado();

@@ -23,27 +23,30 @@ namespace FestaInfantil
         {
             InitializeComponent();
         }
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
+        private void btnInserir_Click_1(object sender, EventArgs e) {
             controlador.Inserir();
         }
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
+        private void btnEditar_Click_1(object sender, EventArgs e) {
             controlador.Editar();
         }
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
+
+        private void btnExcluir_Click_1(object sender, EventArgs e) {
             controlador.Excluir();
         }
-
-        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void btnAdicionarItensTema_Click(object sender, EventArgs e) 
         {
+            controlador.AdicionarItensTema();
+        }
+        private void btnExcluirItensTema_Click(object sender, EventArgs e) {
+            controlador.ExcluirItensTema();
+        }
 
+        private void temasToolStripMenuItem_Click(object sender, EventArgs e) {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
-
-
         }
+        
         private void festaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorFesta(repositorioFesta);
@@ -71,6 +74,18 @@ namespace FestaInfantil
             btnInserir.ToolTipText = controlador.ToolTipInserir;
             btnEditar.ToolTipText = controlador.ToolTipEditar;
             btnExcluir.ToolTipText = controlador.ToolTipExcluir;
+            btnAdicionarItensTema.ToolTipText = controlador.ToolTipAdicionarItensTema;
+            btnExcluirItensTema.ToolTipText = controlador.ToolTipExcluirItensTema;
+            btnFecharAluguel.ToolTipText = controlador.ToolTipFecharAluguel;
+
+            btnInserir.Enabled = controlador.InserirHabilitado;
+            btnEditar.Enabled = controlador.EditarHabilitado;
+            btnExcluir.Enabled = controlador.ExcluirHabilitado;
+            btnAdicionarItensTema.Enabled = controlador.AdicionarItensTemaHabilitado;
+            btnExcluirItensTema.Enabled = controlador.ExcluirItensTemaHabilitado;
+            btnFecharAluguel.Enabled = controlador.FecharAluguelHabilitado;
+
+
         }
 
     }
