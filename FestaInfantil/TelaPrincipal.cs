@@ -1,11 +1,15 @@
 using FestaInfantil.Compartilhado;
+using FestaInfantil.Dominio.ModuloCliente;
 using FestaInfantil.Dominio.ModuloFesta;
 using FestaInfantil.Dominio.ModuloTema;
 using FestaInfantil.InfraDados.Arquivo.Compartilhado;
+using FestaInfantil.InfraDados.Arquivo.ModuloCliente;
 using FestaInfantil.InfraDados.Arquivo.ModuloFesta;
 using FestaInfantil.InfraDados.Arquivo.ModuloTema;
+using FestaInfantil.ModuloCliente;
 using FestaInfantil.ModuloFesta;
 using FestaInfantil.ModuloTema;
+using System.Windows.Forms;
 
 namespace FestaInfantil
 {
@@ -15,38 +19,48 @@ namespace FestaInfantil
         private ControladorBase controlador;
 
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
-
+        private IRepositorioCliente repositorioCliente = new RepositorioClienteEmArquivo(contextoDados);
         private IRepositorioTema repositorioTema = new RepositorioArquivoTema(contextoDados);
         private IRepositorioFesta repositorioFesta = new RepositorioFestaEmArquivo(contextoDados);
-
+        private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
         {
             InitializeComponent();
         }
-        private void btnInserir_Click_1(object sender, EventArgs e) {
+        private void btnInserir_Click_1(object sender, EventArgs e)
+        {
             controlador.Inserir();
         }
-        private void btnEditar_Click_1(object sender, EventArgs e) {
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
             controlador.Editar();
         }
 
-        private void btnExcluir_Click_1(object sender, EventArgs e) {
+        private void btnExcluir_Click_1(object sender, EventArgs e)
+        {
             controlador.Excluir();
         }
-        
-        private void btnAdicionarItensTema_Click(object sender, EventArgs e) 
+
+        private void btnAdicionarItensTema_Click(object sender, EventArgs e)
         {
             controlador.AdicionarItensTema();
         }
-        private void btnExcluirItensTema_Click(object sender, EventArgs e) {
+        private void btnExcluirItensTema_Click(object sender, EventArgs e)
+        {
             controlador.ExcluirItensTema();
         }
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioCliente);
+            ConfigurarTelaPrincipal(controlador);
+        }
 
-        private void temasToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
         }
-        
+
         private void festaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorFesta(repositorioFesta);
@@ -86,6 +100,24 @@ namespace FestaInfantil
             btnFecharAluguel.Enabled = controlador.FecharAluguelHabilitado;
 
 
+        }
+
+        internal void AtualizarRodape(string mensagem)
+        {
+            lbRodape.Text = mensagem;
+        }
+
+      
+
+        public static TelaPrincipal Instancia
+        {
+            get
+            {
+                if (telaPrincipal == null)
+                    telaPrincipal = new TelaPrincipal();
+
+                return telaPrincipal;
+            }
         }
 
     }

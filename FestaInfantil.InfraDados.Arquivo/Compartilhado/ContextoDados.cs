@@ -3,6 +3,7 @@ using System.Text.Json;
 
 using FestaInfantil.Dominio.ModuloTema;
 using FestaInfantil.Dominio.ModuloFesta;
+using FestaInfantil.Dominio.ModuloCliente;
 
 namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
 {
@@ -13,6 +14,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
         public List<Tema> temas;
 
         public List<Festa> festas;
+        public List<Cliente> clientes;
 
         //public List<Compromisso> compromissos;
 
@@ -26,6 +28,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
         {
             temas = new List<Tema>();
             festas = new List<Festa>();
+            clientes = new List<Cliente>();
             //compromissos = new List<Compromisso>();
             //tarefas = new List<Tarefa>();
             //categorias = new List<Categoria>();
@@ -62,7 +65,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
                     this.temas = ctx.temas;
                     this.festas = ctx.festas;
 
-                    //this.contatos = ctx.contatos;
+                    this.clientes = ctx.clientes;
                     //this.compromissos = ctx.compromissos;
                     //this.tarefas = ctx.tarefas;
                     //this.categorias = ctx.categorias;
