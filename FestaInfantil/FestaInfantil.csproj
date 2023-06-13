@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="ModuloAluguel\" />
-    <Folder Include="ModuloCliente\" />
   </ItemGroup>
 
   <ItemGroup>

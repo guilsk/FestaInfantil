@@ -2,6 +2,7 @@
 using System.Text.Json;
 
 using FestaInfantil.Dominio.ModuloTema;
+using FestaInfantil.Dominio.ModuloCliente;
 
 namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
 {
@@ -10,6 +11,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
         private const string NOME_ARQUIVO = "Compartilhado\\FestaInfantil.json";
 
         public List<Tema> temas;
+        public List<Cliente> clientes;
 
         //public List<Compromisso> compromissos;
 
@@ -22,6 +24,7 @@ namespace FestaInfantil.InfraDados.Arquivo.Compartilhado
         public ContextoDados()
         {
             temas = new List<Tema>();
+            clientes = new List<Cliente>();
             //compromissos = new List<Compromisso>();
             //tarefas = new List<Tarefa>();
             //categorias = new List<Categoria>();

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             menuStrip1 = new MenuStrip();
             tpMenuCadastros = new ToolStripMenuItem();
-            clientesToolStripMenuItem = new ToolStripMenuItem();
+            tpClientes = new ToolStripMenuItem();
             temasToolStripMenuItem = new ToolStripMenuItem();
             festaToolStripMenuItem = new ToolStripMenuItem();
             aluguelToolStripMenuItem = new ToolStripMenuItem();
@@ -64,33 +64,34 @@
             // 
             // tpMenuCadastros
             // 
-            tpMenuCadastros.DropDownItems.AddRange(new ToolStripItem[] { clientesToolStripMenuItem, temasToolStripMenuItem, festaToolStripMenuItem, aluguelToolStripMenuItem });
+            tpMenuCadastros.DropDownItems.AddRange(new ToolStripItem[] { tpClientes, temasToolStripMenuItem, festaToolStripMenuItem, aluguelToolStripMenuItem });
             tpMenuCadastros.Name = "tpMenuCadastros";
             tpMenuCadastros.Size = new Size(71, 20);
             tpMenuCadastros.Text = "Cadastros";
             // 
-            // clientesToolStripMenuItem
+            // tpClientes
             // 
-            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(116, 22);
-            clientesToolStripMenuItem.Text = "Clientes";
+            tpClientes.Name = "tpClientes";
+            tpClientes.Size = new Size(180, 22);
+            tpClientes.Text = "Clientes";
+            tpClientes.Click += tpClientes_Click;
             // 
             // temasToolStripMenuItem
             // 
             temasToolStripMenuItem.Name = "temasToolStripMenuItem";
-            temasToolStripMenuItem.Size = new Size(116, 22);
+            temasToolStripMenuItem.Size = new Size(180, 22);
             temasToolStripMenuItem.Text = "Temas";
             // 
             // festaToolStripMenuItem
             // 
             festaToolStripMenuItem.Name = "festaToolStripMenuItem";
-            festaToolStripMenuItem.Size = new Size(116, 22);
+            festaToolStripMenuItem.Size = new Size(180, 22);
             festaToolStripMenuItem.Text = "Festa";
             // 
             // aluguelToolStripMenuItem
             // 
             aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            aluguelToolStripMenuItem.Size = new Size(116, 22);
+            aluguelToolStripMenuItem.Size = new Size(180, 22);
             aluguelToolStripMenuItem.Text = "Aluguel";
             // 
             // panelRegistros
@@ -227,7 +228,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem tpMenuCadastros;
-        private ToolStripMenuItem clientesToolStripMenuItem;
+        private ToolStripMenuItem tpClientes;
         private ToolStripMenuItem temasToolStripMenuItem;
         private ToolStripMenuItem festaToolStripMenuItem;
         private ToolStripMenuItem aluguelToolStripMenuItem;
