@@ -36,7 +36,6 @@
             festaToolStripMenuItem = new ToolStripMenuItem();
             aluguelToolStripMenuItem = new ToolStripMenuItem();
             panelRegistros = new Panel();
-            lbRodape = new Label();
             toolStrip1 = new ToolStrip();
             btnInserir = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
@@ -50,6 +49,7 @@
             toolStripSeparator5 = new ToolStripSeparator();
             btnFecharAluguel = new ToolStripButton();
             labelTipoCadastro = new ToolStripLabel();
+            lbRodape = new Label();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -59,7 +59,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { tpMenuCadastros });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(682, 24);
+            menuStrip1.Size = new Size(1264, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -73,47 +73,39 @@
             // clientesToolStripMenuItem
             // 
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(180, 22);
+            clientesToolStripMenuItem.Size = new Size(116, 22);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // temasToolStripMenuItem
             // 
             temasToolStripMenuItem.Name = "temasToolStripMenuItem";
-            temasToolStripMenuItem.Size = new Size(180, 22);
+            temasToolStripMenuItem.Size = new Size(116, 22);
             temasToolStripMenuItem.Text = "Temas";
             temasToolStripMenuItem.Click += temasToolStripMenuItem_Click;
             // 
             // festaToolStripMenuItem
             // 
             festaToolStripMenuItem.Name = "festaToolStripMenuItem";
-            festaToolStripMenuItem.Size = new Size(180, 22);
+            festaToolStripMenuItem.Size = new Size(116, 22);
             festaToolStripMenuItem.Text = "Festa";
             festaToolStripMenuItem.Click += festaToolStripMenuItem_Click;
             // 
             // aluguelToolStripMenuItem
             // 
             aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            aluguelToolStripMenuItem.Size = new Size(180, 22);
+            aluguelToolStripMenuItem.Size = new Size(116, 22);
             aluguelToolStripMenuItem.Text = "Aluguel";
             // 
             // panelRegistros
             // 
+            panelRegistros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelRegistros.AutoSize = true;
             panelRegistros.Location = new Point(0, 53);
-            panelRegistros.MaximumSize = new Size(682, 276);
-            panelRegistros.MinimumSize = new Size(682, 276);
+            panelRegistros.MaximumSize = new Size(99999999, 999999999);
             panelRegistros.Name = "panelRegistros";
-            panelRegistros.Size = new Size(682, 276);
+            panelRegistros.Size = new Size(1264, 601);
             panelRegistros.TabIndex = 1;
-            // 
-            // lbRodape
-            // 
-            lbRodape.AutoSize = true;
-            lbRodape.Location = new Point(12, 332);
-            lbRodape.Name = "lbRodape";
-            lbRodape.Size = new Size(47, 15);
-            lbRodape.TabIndex = 0;
-            lbRodape.Text = "RodaPe";
             // 
             // toolStrip1
             // 
@@ -121,7 +113,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, toolStripSeparator3, btnEditar, toolStripSeparator1, btnExcluir, toolStripSeparator2, btnAdicionarItensTema, toolStripSeparator4, btnExcluirItensTema, toolStripSeparator5, btnFecharAluguel, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(682, 31);
+            toolStrip1.Size = new Size(1264, 31);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -216,20 +208,31 @@
             labelTipoCadastro.Size = new Size(80, 28);
             labelTipoCadastro.Text = "Tipo Cadastro";
             // 
+            // lbRodape
+            // 
+            lbRodape.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lbRodape.AutoSize = true;
+            lbRodape.Location = new Point(12, 657);
+            lbRodape.Name = "lbRodape";
+            lbRodape.Size = new Size(47, 15);
+            lbRodape.TabIndex = 0;
+            lbRodape.Text = "RodaPe";
+            // 
             // TelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 350);
+            ClientSize = new Size(1264, 681);
             Controls.Add(toolStrip1);
             Controls.Add(lbRodape);
             Controls.Add(panelRegistros);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MaximumSize = new Size(698, 389);
-            MinimumSize = new Size(698, 389);
+            MaximumSize = new Size(1280, 720);
+            MinimumSize = new Size(640, 480);
             Name = "TelaPrincipal";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Infantil";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -248,7 +251,6 @@
         private ToolStripMenuItem festaToolStripMenuItem;
         private ToolStripMenuItem aluguelToolStripMenuItem;
         private Panel panelRegistros;
-        private Label lbRodape;
         private ToolStrip toolStrip1;
         private ToolStripButton btnInserir;
         private ToolStripSeparator toolStripSeparator3;
@@ -262,5 +264,6 @@
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripButton btnFecharAluguel;
         private ToolStripLabel labelTipoCadastro;
+        private Label lbRodape;
     }
 }

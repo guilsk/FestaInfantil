@@ -54,7 +54,7 @@ namespace FestaInfantil.ModuloFesta
             grid.Rows.Clear();
 
             foreach (Festa f in festas)
-                grid.Rows.Add(f.id, f.cliente, f.tema, f.data, f.horaInicio, f.endereco, f.valorTotal); ;
+                grid.Rows.Add(f.id, f.cliente, f.tema, f.data.ToShortDateString(), f.horaInicio.Hours + ":" + f.horaInicio.Minutes, f.endereco, f.valorTotal); ;
         }
 
         public int ObterIdSelecionado()

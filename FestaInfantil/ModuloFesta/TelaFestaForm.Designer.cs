@@ -90,7 +90,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(175, 302);
+            label5.Location = new Point(214, 302);
             label5.Name = "label5";
             label5.Size = new Size(39, 15);
             label5.TabIndex = 4;
@@ -99,7 +99,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(302, 302);
+            label6.Location = new Point(323, 302);
             label6.Name = "label6";
             label6.Size = new Size(30, 15);
             label6.TabIndex = 5;
@@ -153,25 +153,27 @@
             txtData.Format = DateTimePickerFormat.Short;
             txtData.Location = new Point(92, 298);
             txtData.Name = "txtData";
-            txtData.Size = new Size(75, 23);
+            txtData.Size = new Size(116, 23);
             txtData.TabIndex = 11;
             // 
             // txtHoraInicio
             // 
-            txtHoraInicio.Format = DateTimePickerFormat.Time;
-            txtHoraInicio.Location = new Point(219, 298);
+            txtHoraInicio.CustomFormat = "HH:mm";
+            txtHoraInicio.Format = DateTimePickerFormat.Custom;
+            txtHoraInicio.Location = new Point(259, 298);
             txtHoraInicio.Name = "txtHoraInicio";
             txtHoraInicio.ShowUpDown = true;
-            txtHoraInicio.Size = new Size(75, 23);
+            txtHoraInicio.Size = new Size(53, 23);
             txtHoraInicio.TabIndex = 12;
             // 
             // txtHoraFim
             // 
-            txtHoraFim.Format = DateTimePickerFormat.Time;
-            txtHoraFim.Location = new Point(337, 298);
+            txtHoraFim.CustomFormat = "HH:mm";
+            txtHoraFim.Format = DateTimePickerFormat.Custom;
+            txtHoraFim.Location = new Point(359, 298);
             txtHoraFim.Name = "txtHoraFim";
             txtHoraFim.ShowUpDown = true;
-            txtHoraFim.Size = new Size(75, 23);
+            txtHoraFim.Size = new Size(53, 23);
             txtHoraFim.TabIndex = 13;
             // 
             // txtValorTotal
