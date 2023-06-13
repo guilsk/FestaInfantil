@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             menuStrip1 = new MenuStrip();
             tpMenuCadastros = new ToolStripMenuItem();
-            tpClientes = new ToolStripMenuItem();
+            clientesToolStripMenuItem = new ToolStripMenuItem();
             temasToolStripMenuItem = new ToolStripMenuItem();
             festaToolStripMenuItem = new ToolStripMenuItem();
             aluguelToolStripMenuItem = new ToolStripMenuItem();
@@ -64,17 +64,17 @@
             // 
             // tpMenuCadastros
             // 
-            tpMenuCadastros.DropDownItems.AddRange(new ToolStripItem[] { tpClientes, temasToolStripMenuItem, festaToolStripMenuItem, aluguelToolStripMenuItem });
+            tpMenuCadastros.DropDownItems.AddRange(new ToolStripItem[] { clientesToolStripMenuItem, temasToolStripMenuItem, festaToolStripMenuItem, aluguelToolStripMenuItem });
             tpMenuCadastros.Name = "tpMenuCadastros";
             tpMenuCadastros.Size = new Size(71, 20);
             tpMenuCadastros.Text = "Cadastros";
             // 
-            // tpClientes
+            // clientesToolStripMenuItem
             // 
-            tpClientes.Name = "tpClientes";
-            tpClientes.Size = new Size(180, 22);
-            tpClientes.Text = "Clientes";
-            tpClientes.Click += tpClientes_Click;
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Size = new Size(180, 22);
+            clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += tpClientes_Click;
             // 
             // temasToolStripMenuItem
             // 
@@ -228,7 +228,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem tpMenuCadastros;
-        private ToolStripMenuItem tpClientes;
+        private ToolStripMenuItem clientesToolStripMenuItem;
         private ToolStripMenuItem temasToolStripMenuItem;
         private ToolStripMenuItem festaToolStripMenuItem;
         private ToolStripMenuItem aluguelToolStripMenuItem;
