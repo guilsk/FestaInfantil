@@ -4,6 +4,7 @@
     {
         public string nome;
         public string telefone;
+        public bool antigo;
 
     }
 }

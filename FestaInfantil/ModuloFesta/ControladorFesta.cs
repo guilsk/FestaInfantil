@@ -1,15 +1,20 @@
-﻿using FestaInfantil.Dominio.ModuloFesta;
+﻿using FestaInfantil.Dominio.ModuloCliente;
+using FestaInfantil.Dominio.ModuloFesta;
+using FestaInfantil.Dominio.ModuloTema;
+using System.Collections.Generic;
 
 namespace FestaInfantil.ModuloFesta
 {
     public class ControladorFesta : ControladorBase
     {
         private IRepositorioFesta repositorioFesta;
+        private IRepositorioTema repositorioTema;
         private TabelaFestaControl tabelaFestas;
 
-        public ControladorFesta(IRepositorioFesta repositorioFesta)
+        public ControladorFesta(IRepositorioFesta repositorioFesta, IRepositorioTema repositorioTema /*IRepositorioCliente*/)
         {
             this.repositorioFesta = repositorioFesta;
+            this.repositorioTema = repositorioTema;
         }
 
         public override string ToolTipInserir => "Inserir Nova Festa";
@@ -22,7 +27,7 @@ namespace FestaInfantil.ModuloFesta
 
         public override void Inserir()
         {
-            TelaFestaForm telaFesta = new TelaFestaForm();
+            TelaFestaForm telaFesta = new TelaFestaForm(/*clientes, */repositorioTema);
             DialogResult opcaoEscolhida = telaFesta.ShowDialog();
 
             if (opcaoEscolhida == DialogResult.OK)
@@ -35,7 +40,7 @@ namespace FestaInfantil.ModuloFesta
 
         public override void Editar()
         {
-            TelaFestaForm telaFesta = new TelaFestaForm();
+            TelaFestaForm telaFesta = new TelaFestaForm(/*clientes, */repositorioTema);
             DialogResult opcaoEscolhida = telaFesta.ShowDialog();
 
             if (opcaoEscolhida == DialogResult.OK)

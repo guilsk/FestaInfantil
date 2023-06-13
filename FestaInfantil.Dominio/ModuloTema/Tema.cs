@@ -37,5 +37,10 @@
         public override string[] Validar() {
             throw new NotImplementedException();
         }
+
+        public override string? ToString()
+        {
+            return nome;
+        }
     }
 }

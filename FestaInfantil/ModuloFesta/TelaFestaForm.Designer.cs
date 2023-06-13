@@ -72,7 +72,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 108);
+            label3.Location = new Point(21, 253);
             label3.Name = "label3";
             label3.Size = new Size(59, 15);
             label3.TabIndex = 2;
@@ -81,7 +81,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(46, 157);
+            label4.Location = new Point(46, 302);
             label4.Name = "label4";
             label4.Size = new Size(34, 15);
             label4.TabIndex = 3;
@@ -90,7 +90,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(175, 157);
+            label5.Location = new Point(175, 302);
             label5.Name = "label5";
             label5.Size = new Size(39, 15);
             label5.TabIndex = 4;
@@ -99,7 +99,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(302, 157);
+            label6.Location = new Point(302, 302);
             label6.Name = "label6";
             label6.Size = new Size(30, 15);
             label6.TabIndex = 5;
@@ -108,7 +108,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(16, 206);
+            label7.Location = new Point(16, 351);
             label7.Name = "label7";
             label7.Size = new Size(64, 15);
             label7.TabIndex = 6;
@@ -117,7 +117,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1, 255);
+            label8.Location = new Point(1, 400);
             label8.Name = "label8";
             label8.Size = new Size(79, 15);
             label8.TabIndex = 7;
@@ -130,6 +130,7 @@
             cmbBoxCliente.Name = "cmbBoxCliente";
             cmbBoxCliente.Size = new Size(152, 23);
             cmbBoxCliente.TabIndex = 8;
+            cmbBoxCliente.SelectedIndexChanged += cmbBoxCliente_SelectedIndexChanged;
             // 
             // cmbBoxTema
             // 
@@ -138,10 +139,11 @@
             cmbBoxTema.Name = "cmbBoxTema";
             cmbBoxTema.Size = new Size(152, 23);
             cmbBoxTema.TabIndex = 9;
+            cmbBoxTema.SelectedValueChanged += cmbBoxTema_SelectedValueChanged;
             // 
             // txtEndereco
             // 
-            txtEndereco.Location = new Point(92, 104);
+            txtEndereco.Location = new Point(92, 249);
             txtEndereco.Name = "txtEndereco";
             txtEndereco.Size = new Size(323, 23);
             txtEndereco.TabIndex = 10;
@@ -149,7 +151,7 @@
             // txtData
             // 
             txtData.Format = DateTimePickerFormat.Short;
-            txtData.Location = new Point(92, 153);
+            txtData.Location = new Point(92, 298);
             txtData.Name = "txtData";
             txtData.Size = new Size(75, 23);
             txtData.TabIndex = 11;
@@ -157,7 +159,7 @@
             // txtHoraInicio
             // 
             txtHoraInicio.Format = DateTimePickerFormat.Time;
-            txtHoraInicio.Location = new Point(219, 153);
+            txtHoraInicio.Location = new Point(219, 298);
             txtHoraInicio.Name = "txtHoraInicio";
             txtHoraInicio.ShowUpDown = true;
             txtHoraInicio.Size = new Size(75, 23);
@@ -166,7 +168,7 @@
             // txtHoraFim
             // 
             txtHoraFim.Format = DateTimePickerFormat.Time;
-            txtHoraFim.Location = new Point(337, 153);
+            txtHoraFim.Location = new Point(337, 298);
             txtHoraFim.Name = "txtHoraFim";
             txtHoraFim.ShowUpDown = true;
             txtHoraFim.Size = new Size(75, 23);
@@ -174,7 +176,7 @@
             // 
             // txtValorTotal
             // 
-            txtValorTotal.Location = new Point(92, 202);
+            txtValorTotal.Location = new Point(92, 347);
             txtValorTotal.Name = "txtValorTotal";
             txtValorTotal.ReadOnly = true;
             txtValorTotal.Size = new Size(152, 23);
@@ -182,7 +184,7 @@
             // 
             // txtValorEntrada
             // 
-            txtValorEntrada.Location = new Point(92, 251);
+            txtValorEntrada.Location = new Point(92, 396);
             txtValorEntrada.Name = "txtValorEntrada";
             txtValorEntrada.ReadOnly = true;
             txtValorEntrada.Size = new Size(152, 23);
@@ -190,7 +192,8 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(259, 449);
+            btnSalvar.DialogResult = DialogResult.OK;
+            btnSalvar.Location = new Point(259, 344);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 75);
             btnSalvar.TabIndex = 17;
@@ -200,7 +203,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(340, 449);
+            btnCancelar.Location = new Point(340, 344);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 75);
             btnCancelar.TabIndex = 18;
@@ -220,16 +223,19 @@
             // 
             txtId.Location = new Point(295, 12);
             txtId.Name = "txtId";
+            txtId.ReadOnly = true;
             txtId.Size = new Size(117, 23);
             txtId.TabIndex = 20;
+            txtId.Text = "0";
             // 
             // listaItens
             // 
             listaItens.FormattingEnabled = true;
-            listaItens.Location = new Point(12, 292);
+            listaItens.Location = new Point(92, 84);
             listaItens.Name = "listaItens";
-            listaItens.Size = new Size(400, 148);
+            listaItens.Size = new Size(320, 148);
             listaItens.TabIndex = 21;
+            listaItens.SelectedValueChanged += listaItens_SelectedValueChanged;
             // 
             // TelaFestaForm
             // 
@@ -237,7 +243,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancelar;
-            ClientSize = new Size(430, 536);
+            ClientSize = new Size(430, 432);
             Controls.Add(listaItens);
             Controls.Add(txtId);
             Controls.Add(label9);
