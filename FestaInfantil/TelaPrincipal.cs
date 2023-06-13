@@ -1,11 +1,15 @@
 using FestaInfantil.Compartilhado;
+using FestaInfantil.Dominio.ModuloCliente;
 using FestaInfantil.Dominio.ModuloFesta;
 using FestaInfantil.Dominio.ModuloTema;
 using FestaInfantil.InfraDados.Arquivo.Compartilhado;
+using FestaInfantil.InfraDados.Arquivo.ModuloCliente;
 using FestaInfantil.InfraDados.Arquivo.ModuloFesta;
 using FestaInfantil.InfraDados.Arquivo.ModuloTema;
+using FestaInfantil.ModuloCliente;
 using FestaInfantil.ModuloFesta;
 using FestaInfantil.ModuloTema;
+using System.Windows.Forms;
 
 namespace FestaInfantil
 {
@@ -15,10 +19,10 @@ namespace FestaInfantil
         private ControladorBase controlador;
 
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
-
+        private IRepositorioCliente repositorioCliente = new RepositorioClienteEmArquivo(contextoDados);
         private IRepositorioTema repositorioTema = new RepositorioArquivoTema(contextoDados);
         private IRepositorioFesta repositorioFesta = new RepositorioFestaEmArquivo(contextoDados);
-
+        private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
         {
             InitializeComponent();
@@ -44,6 +48,11 @@ namespace FestaInfantil
         private void btnExcluirItensTema_Click(object sender, EventArgs e)
         {
             controlador.ExcluirItensTema();
+        }
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioCliente);
+            ConfigurarTelaPrincipal(controlador);
         }
 
         private void temasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +100,24 @@ namespace FestaInfantil
             btnFecharAluguel.Enabled = controlador.FecharAluguelHabilitado;
 
 
+        }
+
+        internal void AtualizarRodape(string mensagem)
+        {
+            lbRodape.Text = mensagem;
+        }
+
+      
+
+        public static TelaPrincipal Instancia
+        {
+            get
+            {
+                if (telaPrincipal == null)
+                    telaPrincipal = new TelaPrincipal();
+
+                return telaPrincipal;
+            }
         }
 
     }
