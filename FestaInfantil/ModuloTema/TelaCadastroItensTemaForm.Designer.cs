@@ -163,6 +163,7 @@
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.txtTitulo);
             this.Name = "TelaCadastroItensTemaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroItensTemaForm";
             this.ResumeLayout(false);
             this.PerformLayout();

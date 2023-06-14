@@ -18,6 +18,12 @@ namespace FestaInfantil.Dominio.ModuloFesta
         public List<ItemTema> itensSelecionados;
         public bool encerrado = false;
 
+        public void EncerrarFesta() {
+            encerrado = true;
+            valorRestante = 0;
+            cliente.antigo = true;
+        }
+
         public Festa() { }
 
         public Festa(Cliente cliente, Tema tema, DateTime data, TimeSpan horaInicio, TimeSpan horaFim, string endereco, decimal valorTotal, decimal valorEntrada, List<ItemTema> itensSelecionados, bool encerrado)

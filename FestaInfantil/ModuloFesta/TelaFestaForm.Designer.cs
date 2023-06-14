@@ -28,252 +28,254 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            cmbBoxCliente = new ComboBox();
-            cmbBoxTema = new ComboBox();
-            txtEndereco = new TextBox();
-            txtData = new DateTimePicker();
-            txtHoraInicio = new DateTimePicker();
-            txtHoraFim = new DateTimePicker();
-            txtValorTotal = new TextBox();
-            txtValorEntrada = new TextBox();
-            btnSalvar = new Button();
-            btnCancelar = new Button();
-            label9 = new Label();
-            txtId = new TextBox();
-            listaItens = new CheckedListBox();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbBoxCliente = new System.Windows.Forms.ComboBox();
+            this.cmbBoxTema = new System.Windows.Forms.ComboBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtData = new System.Windows.Forms.DateTimePicker();
+            this.txtHoraInicio = new System.Windows.Forms.DateTimePicker();
+            this.txtHoraFim = new System.Windows.Forms.DateTimePicker();
+            this.txtValorTotal = new System.Windows.Forms.TextBox();
+            this.txtValorEntrada = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.listaItens = new System.Windows.Forms.CheckedListBox();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(33, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Cliente:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cliente:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(42, 59);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Tema:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tema:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(21, 253);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Endereço:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 253);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Endereço:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(46, 302);
-            label4.Name = "label4";
-            label4.Size = new Size(34, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Data:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 302);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Data:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(214, 302);
-            label5.Name = "label5";
-            label5.Size = new Size(39, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Início:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(214, 302);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Início:";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(323, 302);
-            label6.Name = "label6";
-            label6.Size = new Size(30, 15);
-            label6.TabIndex = 5;
-            label6.Text = "Fim:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(323, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 15);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Fim:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(16, 351);
-            label7.Name = "label7";
-            label7.Size = new Size(64, 15);
-            label7.TabIndex = 6;
-            label7.Text = "Valor Total:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 351);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 15);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Valor Total:";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(1, 400);
-            label8.Name = "label8";
-            label8.Size = new Size(79, 15);
-            label8.TabIndex = 7;
-            label8.Text = "Valor Entrada:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1, 400);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 15);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Valor Entrada:";
             // 
             // cmbBoxCliente
             // 
-            cmbBoxCliente.FormattingEnabled = true;
-            cmbBoxCliente.Location = new Point(92, 12);
-            cmbBoxCliente.Name = "cmbBoxCliente";
-            cmbBoxCliente.Size = new Size(152, 23);
-            cmbBoxCliente.TabIndex = 8;
-            cmbBoxCliente.SelectedIndexChanged += cmbBoxCliente_SelectedIndexChanged;
+            this.cmbBoxCliente.FormattingEnabled = true;
+            this.cmbBoxCliente.Location = new System.Drawing.Point(92, 12);
+            this.cmbBoxCliente.Name = "cmbBoxCliente";
+            this.cmbBoxCliente.Size = new System.Drawing.Size(152, 23);
+            this.cmbBoxCliente.TabIndex = 8;
+            this.cmbBoxCliente.SelectedIndexChanged += new System.EventHandler(this.cmbBoxCliente_SelectedIndexChanged);
             // 
             // cmbBoxTema
             // 
-            cmbBoxTema.FormattingEnabled = true;
-            cmbBoxTema.Location = new Point(92, 55);
-            cmbBoxTema.Name = "cmbBoxTema";
-            cmbBoxTema.Size = new Size(152, 23);
-            cmbBoxTema.TabIndex = 9;
-            cmbBoxTema.SelectedValueChanged += cmbBoxTema_SelectedValueChanged;
+            this.cmbBoxTema.FormattingEnabled = true;
+            this.cmbBoxTema.Location = new System.Drawing.Point(92, 55);
+            this.cmbBoxTema.Name = "cmbBoxTema";
+            this.cmbBoxTema.Size = new System.Drawing.Size(152, 23);
+            this.cmbBoxTema.TabIndex = 9;
+            this.cmbBoxTema.SelectedValueChanged += new System.EventHandler(this.cmbBoxTema_SelectedValueChanged);
             // 
             // txtEndereco
             // 
-            txtEndereco.Location = new Point(92, 249);
-            txtEndereco.Name = "txtEndereco";
-            txtEndereco.Size = new Size(323, 23);
-            txtEndereco.TabIndex = 10;
+            this.txtEndereco.Location = new System.Drawing.Point(92, 249);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(323, 23);
+            this.txtEndereco.TabIndex = 10;
             // 
             // txtData
             // 
-            txtData.Format = DateTimePickerFormat.Short;
-            txtData.Location = new Point(92, 298);
-            txtData.Name = "txtData";
-            txtData.Size = new Size(116, 23);
-            txtData.TabIndex = 11;
+            this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtData.Location = new System.Drawing.Point(92, 298);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(116, 23);
+            this.txtData.TabIndex = 11;
             // 
             // txtHoraInicio
             // 
-            txtHoraInicio.CustomFormat = "HH:mm";
-            txtHoraInicio.Format = DateTimePickerFormat.Custom;
-            txtHoraInicio.Location = new Point(259, 298);
-            txtHoraInicio.Name = "txtHoraInicio";
-            txtHoraInicio.ShowUpDown = true;
-            txtHoraInicio.Size = new Size(53, 23);
-            txtHoraInicio.TabIndex = 12;
+            this.txtHoraInicio.CustomFormat = "HH:mm";
+            this.txtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtHoraInicio.Location = new System.Drawing.Point(259, 298);
+            this.txtHoraInicio.Name = "txtHoraInicio";
+            this.txtHoraInicio.ShowUpDown = true;
+            this.txtHoraInicio.Size = new System.Drawing.Size(53, 23);
+            this.txtHoraInicio.TabIndex = 12;
             // 
             // txtHoraFim
             // 
-            txtHoraFim.CustomFormat = "HH:mm";
-            txtHoraFim.Format = DateTimePickerFormat.Custom;
-            txtHoraFim.Location = new Point(359, 298);
-            txtHoraFim.Name = "txtHoraFim";
-            txtHoraFim.ShowUpDown = true;
-            txtHoraFim.Size = new Size(53, 23);
-            txtHoraFim.TabIndex = 13;
+            this.txtHoraFim.CustomFormat = "HH:mm";
+            this.txtHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtHoraFim.Location = new System.Drawing.Point(359, 298);
+            this.txtHoraFim.Name = "txtHoraFim";
+            this.txtHoraFim.ShowUpDown = true;
+            this.txtHoraFim.Size = new System.Drawing.Size(53, 23);
+            this.txtHoraFim.TabIndex = 13;
             // 
             // txtValorTotal
             // 
-            txtValorTotal.Location = new Point(92, 347);
-            txtValorTotal.Name = "txtValorTotal";
-            txtValorTotal.ReadOnly = true;
-            txtValorTotal.Size = new Size(152, 23);
-            txtValorTotal.TabIndex = 14;
+            this.txtValorTotal.Location = new System.Drawing.Point(92, 347);
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.ReadOnly = true;
+            this.txtValorTotal.Size = new System.Drawing.Size(152, 23);
+            this.txtValorTotal.TabIndex = 14;
             // 
             // txtValorEntrada
             // 
-            txtValorEntrada.Location = new Point(92, 396);
-            txtValorEntrada.Name = "txtValorEntrada";
-            txtValorEntrada.ReadOnly = true;
-            txtValorEntrada.Size = new Size(152, 23);
-            txtValorEntrada.TabIndex = 15;
+            this.txtValorEntrada.Location = new System.Drawing.Point(92, 396);
+            this.txtValorEntrada.Name = "txtValorEntrada";
+            this.txtValorEntrada.ReadOnly = true;
+            this.txtValorEntrada.Size = new System.Drawing.Size(152, 23);
+            this.txtValorEntrada.TabIndex = 15;
             // 
             // btnSalvar
             // 
-            btnSalvar.DialogResult = DialogResult.OK;
-            btnSalvar.Location = new Point(259, 344);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(75, 75);
-            btnSalvar.TabIndex = 17;
-            btnSalvar.Text = "Salvar";
-            btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += btnSalvar_Click;
+            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSalvar.Location = new System.Drawing.Point(259, 344);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 75);
+            this.btnSalvar.TabIndex = 17;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(340, 344);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 75);
-            btnCancelar.TabIndex = 18;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(340, 344);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 75);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(272, 16);
-            label9.Name = "label9";
-            label9.Size = new Size(20, 15);
-            label9.TabIndex = 19;
-            label9.Text = "Id:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(272, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 15);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Id:";
             // 
             // txtId
             // 
-            txtId.Location = new Point(295, 12);
-            txtId.Name = "txtId";
-            txtId.ReadOnly = true;
-            txtId.Size = new Size(117, 23);
-            txtId.TabIndex = 20;
-            txtId.Text = "0";
+            this.txtId.Location = new System.Drawing.Point(295, 12);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(117, 23);
+            this.txtId.TabIndex = 20;
+            this.txtId.Text = "0";
             // 
             // listaItens
             // 
-            listaItens.FormattingEnabled = true;
-            listaItens.Location = new Point(92, 84);
-            listaItens.Name = "listaItens";
-            listaItens.Size = new Size(320, 148);
-            listaItens.TabIndex = 21;
-            listaItens.SelectedValueChanged += listaItens_SelectedValueChanged;
+            this.listaItens.FormattingEnabled = true;
+            this.listaItens.Location = new System.Drawing.Point(92, 84);
+            this.listaItens.Name = "listaItens";
+            this.listaItens.Size = new System.Drawing.Size(320, 148);
+            this.listaItens.TabIndex = 21;
+            this.listaItens.SelectedIndexChanged += new System.EventHandler(this.listaItens_SelectedValueChanged);
             // 
             // TelaFestaForm
             // 
-            AcceptButton = btnSalvar;
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = btnCancelar;
-            ClientSize = new Size(430, 432);
-            Controls.Add(listaItens);
-            Controls.Add(txtId);
-            Controls.Add(label9);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnSalvar);
-            Controls.Add(txtValorEntrada);
-            Controls.Add(txtValorTotal);
-            Controls.Add(txtHoraFim);
-            Controls.Add(txtHoraInicio);
-            Controls.Add(txtData);
-            Controls.Add(txtEndereco);
-            Controls.Add(cmbBoxTema);
-            Controls.Add(cmbBoxCliente);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "TelaFestaForm";
-            ShowIcon = false;
-            Text = "Cadastro de Festas";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AcceptButton = this.btnSalvar;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(430, 432);
+            this.Controls.Add(this.listaItens);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.txtValorEntrada);
+            this.Controls.Add(this.txtValorTotal);
+            this.Controls.Add(this.txtHoraFim);
+            this.Controls.Add(this.txtHoraInicio);
+            this.Controls.Add(this.txtData);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.cmbBoxTema);
+            this.Controls.Add(this.cmbBoxCliente);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "TelaFestaForm";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Festas";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

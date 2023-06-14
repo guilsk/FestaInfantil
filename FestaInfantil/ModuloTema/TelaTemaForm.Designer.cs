@@ -99,6 +99,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
             this.Name = "TelaTemaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaTemaForm";
             this.ResumeLayout(false);
             this.PerformLayout();

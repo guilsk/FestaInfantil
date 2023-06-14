@@ -122,6 +122,28 @@ namespace FestaInfantil.ModuloFesta
             }
         }
 
+        internal void ConfigurarTela(Festa festa) {
+            txtId.Text = festa.id.ToString();
+            cmbBoxTema.SelectedItem = festa.tema;
+            cmbBoxCliente.SelectedItem = festa.cliente;
+            txtEndereco.Text = festa.endereco;
+            txtData.Value = festa.data;
+            txtHoraInicio.Value = DateTime.Now.Date.Add(festa.horaInicio);
+            txtHoraFim.Value = DateTime.Now.Date.Add(festa.horaFim);
+            txtValorTotal.Text = festa.valorTotal.ToString();
+            txtValorEntrada.Text = festa.valorEntrada.ToString();
 
+            int i = 0;
+
+            for (int j = 0; j < listaItens.Items.Count; j++) {
+
+                var item = (ItemTema)listaItens.Items[j];
+                if (festa.itensSelecionados.Contains(item))
+                    listaItens.SetItemChecked(i, true);
+
+                i++;
+            }
+
+        }
     }
 }

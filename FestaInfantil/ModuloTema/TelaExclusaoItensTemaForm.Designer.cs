@@ -121,6 +121,7 @@
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.txtTitulo);
             this.Name = "TelaExclusaoItensTemaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaExclusaoItensTemaForm";
             this.ResumeLayout(false);
             this.PerformLayout();
